@@ -33,17 +33,23 @@ class _DiceMainPageState extends State<DiceMainPage> {
             Expanded(
               child: FlatButton(
                   onPressed: () {
-
+                    setState(() {
+                      leftDiceNumber = Random().nextInt(6) + 1;
+                      print('leftDiceNumber = $leftDiceNumber');
+                    });
                   },
-                  child: Image.asset('images/dice1.png')
+                  child: Image.asset('images/dice$leftDiceNumber.png')
               ),
             ),
             Expanded(
               child: FlatButton(
                   onPressed: () {
-
+                    setState(() {
+                      rightDiceNumber = Random().nextInt(6) + 1;
+                      print('rightDiceNumber = $rightDiceNumber');
+                    });
                   },
-                  child: Image.asset('images/dice4.png')
+                  child: Image.asset('images/dice$rightDiceNumber.png')
               ),
             ),
           ],
