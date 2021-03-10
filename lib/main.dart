@@ -24,27 +24,30 @@ class DiceMainPage extends StatefulWidget {
 class _DiceMainPageState extends State<DiceMainPage> {
   int leftDiceNumber = 1;
   int rightDiceNumber = 5;
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: mainPage,
-    );
-  }
+    return Center(
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: FlatButton(
+                  onPressed: () {
 
-  Widget mainPage = Center(
-    child: Row(
-      children: <Widget>[
-        Expanded(
-          child: Image(
-              image: AssetImage('images/dice1.png')
-          ),
+                  },
+                  child: Image.asset('images/dice1.png')
+              ),
+            ),
+            Expanded(
+              child: FlatButton(
+                  onPressed: () {
+
+                  },
+                  child: Image.asset('images/dice4.png')
+              ),
+            ),
+          ],
         ),
-        Expanded(
-          child: Image(
-              image: AssetImage('images/dice2.png')
-          ),
-        ),
-      ],
-    ),
-  );
+      );
+  }
 }
