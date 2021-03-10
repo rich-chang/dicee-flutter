@@ -18,26 +18,23 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: Image(
-                    image: AssetImage('images/dice1.png')
-                ),
-              ),
-              Expanded(
-                  child: Image(
-                      image: AssetImage('images/dice4.png')
-                  ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
+    return mainPage;
   }
+
+  Widget mainPage = Center(
+    child: Row(
+      children: <Widget>[
+        Expanded(
+          child: Image(
+              image: AssetImage('images/dice1.png')
+          ),
+        ),
+        Expanded(
+          child: Image(
+              image: AssetImage('images/dice3.png')
+          ),
+        ),
+      ],
+    ),
+  );
 }
